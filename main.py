@@ -1,7 +1,7 @@
 import cv2
-import pyttsx3
+# import pyttsx3
+import pyttsx4
 from datetime import datetime
-
 
 thres = 0.45  # Threshold to detect object
 
@@ -24,7 +24,7 @@ net.setInputScale(1.0 / 127.5)
 net.setInputMean((127.5, 127.5, 127.5))
 net.setInputSwapRB(True)
 text = "Good evening, how are you today?"
-engine = pyttsx3.init()
+engine = pyttsx4.init()
 voices = engine.getProperty("voices")
 engine.setProperty('voice', 'com.apple.speech.synthesis.voice.samantha')
 engine.setProperty('rate', 135)
